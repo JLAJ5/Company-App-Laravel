@@ -40,7 +40,7 @@
                                     <td class="w-1/5">{{ $empresa->nomeFantasia }}</td>
                                     <td>
                                         <a class="underline text-sm text-red-600 hover:text-red-900" href="{{ route('fornecedors.show', ['fornecedor' => $fornecedor->id]) }}">
-                                            {{ __('Editar') }}
+                                            {{ __('Visualizar') }}
                                         </a>
                                     </td>
                                 </tr>

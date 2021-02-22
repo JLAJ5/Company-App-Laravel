@@ -33,7 +33,7 @@
                                     <td class="w-2/5">{{ $empresa->cnpj }}</td>
                                     <td>
                                         <a class="underline text-sm text-red-600 hover:text-red-900" href="{{ route('empresas.show', ['empresa' => $empresa->id]) }}">
-                                            {{ __('Editar') }}
+                                            {{ __('Visualizar') }}
                                         </a>
                                     </td>
                                 </tr>
