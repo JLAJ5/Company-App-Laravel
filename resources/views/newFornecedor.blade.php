@@ -45,11 +45,11 @@
                         <br>
                         <div class="flex items-center justify-between">
 
-                            <a class="underline text-sm text-red-600 hover:text-red-900" href="{{ route('fornecedors.index') }}">
+                            <a href="{{ route('fornecedors.index') }}" class="underline text-sm text-red-600 hover:text-red-900" >
                                 {{ __('Cancelar') }}
                             </a>
 
-                            <input type="submit" class="inline-flex items-center px-4 py-2 bg-blue-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-blue-900 focus:outline-none focus:border-blue-900 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150" value="Cadastrar">
+                            <x-input-blue value="Cadastrar"/>
 
                         </div>
 

@@ -14,7 +14,7 @@
         <div class="max-w-max mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-
+                    @if($empresas->count() > 0)
                     <div>
                         <table class="table-striped text-left">
                             <thead>
@@ -32,16 +32,18 @@
                                     <td class="w-1/6">{{ $empresa->uf }}</td>
                                     <td class="w-2/5">{{ $empresa->cnpj }}</td>
                                     <td>
-                                        <a class="underline text-sm text-red-600 hover:text-red-900" href="{{ route('empresas.show', ['empresa' => $empresa->id]) }}">
+                                        <x-a-info href="{{ route('empresas.show', ['empresa' => $empresa->id]) }}">
                                             {{ __('Visualizar') }}
-                                        </a>
+                                        </x-a-info>
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
                     </div>
-
+                    @else
+                    Não há empresas cadastradas!!!
+                    @endif
                 </div>
             </div>
         </div>

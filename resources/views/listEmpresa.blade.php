@@ -29,20 +29,20 @@
                     <div class="py-1 border-t border-gray-200">
                         <div class="py-1 px-5 flex items-center justify-between">
                         
-                            <a href="{{ route('empresas.index') }}" class="inline-flex items-center px-4 py-2 bg-blue-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-blue-900 focus:outline-none focus:border-blue-900 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150">
+                            <x-a-blue href="{{ route('empresas.index') }}" >
                                 {{ __('Voltar') }}
-                            </a>
+                            </x-a-blue>
 
-                            <a href="{{ route('empresas.edit', ['empresa' => $empresa->id]) }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
+                            <x-a-gray href="{{ route('empresas.edit', ['empresa' => $empresa->id]) }}" >
                                 {{ __('Editar') }}
-                            </a>
+                            </x-a-gray>
 
                             <form method="POST" action="{{ route('empresas.destroy', ['empresa' => $empresa->id]) }}">
 
                                 @method('DELETE')
                                 @csrf
 
-                                <input type="submit" class="underline bg-white text-sm text-red-600 hover:text-red-900" value="Remover">
+                                <x-input-red value="Remover" />
 
                             </form>
                         </div>
